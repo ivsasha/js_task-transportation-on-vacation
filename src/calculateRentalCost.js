@@ -4,11 +4,13 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
+  const LONG_TERM = 7;
+  const SHORT_TERM = 3;
   let daysCount = days * 40;
 
-  if (days >= 3 && days < 7) {
+  if (days >= SHORT_TERM && days < LONG_TERM) {
     daysCount -= 20;
-  } else if (days >= 7) {
+  } else if (days >= LONG_TERM) {
     daysCount -= 50;
   }
 
